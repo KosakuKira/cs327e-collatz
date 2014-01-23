@@ -43,16 +43,19 @@ def collatz_eval (i, j) :
     return v
 
 # Below is a helper method for collatz_eval
+length = 1
 
 def collatz_help (num):
     if num = 1:
-        return num
+        return length
 
     elif (num % 2 != 0):
+        length += 1
         num = ((3*num) + 1)/2
         return collatz_helper (num)
 
     else:
+        length += 1
         num = num / 2
         return collatz_helper (num)
 
