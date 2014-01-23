@@ -43,7 +43,6 @@ def collatz_eval (i, j) :
     return v
 
 # Below is a helper method for collatz_eval
-length = 1
 
 def collatz_help (num, length):
     if num = 1:
