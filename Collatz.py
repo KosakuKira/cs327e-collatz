@@ -57,7 +57,7 @@ def collatz_help (num, length):
 
     else:
         length += 1
-        num = num / 2
+        num = int(num / 2)
         return collatz_helper (num)
 
 
