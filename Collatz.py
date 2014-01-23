@@ -48,7 +48,7 @@ def collatz_help (num):
     if num = 1:
         return num
 
-    else if (num % 2 != 0):
+    elif (num % 2 != 0):
         num = ((3*num) + 1)/2
         return collatz_helper (num)
 
