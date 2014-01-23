@@ -41,7 +41,7 @@ def collatz_eval (i, j) :
     assert i < j
     
     for a in range(i, j + 1):
-        cycleCheck = collatz_help(i, 1)
+        cycleCheck = collatz_help(a, 1)
         if cycleCheck > max_cycle_length:
             max_cycle_length = cycleCheck
         
