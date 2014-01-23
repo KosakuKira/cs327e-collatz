@@ -100,3 +100,9 @@ def collatz_solve (r, w) :
         i, j = a
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
+def main():
+    print (collatz_help(9, 1))
+    print (collatz_eval(1, 2))
+
+main()
