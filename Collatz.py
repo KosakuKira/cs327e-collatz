@@ -53,12 +53,12 @@ def collatz_help (num, length):
         num = int( ( 3*num ) + 1 )
         length += 1
         num = int(num / 2) 
-        return collatz_helper (num)
+        return collatz_helper (num, length)
 
     else:
         length += 1
         num = int(num / 2)
-        return collatz_helper (num)
+        return collatz_helper (num, length)
 
 
 # -------------
