@@ -42,6 +42,8 @@ def collatz_eval (i, j) :
     assert(v > 0)
     return v
 
+# Below is a helper method for collatz_eval
+
 # -------------
 # collatz_print
 # -------------
