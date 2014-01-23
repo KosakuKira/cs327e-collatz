@@ -45,14 +45,15 @@ def collatz_eval (i, j) :
 # Below is a helper method for collatz_eval
 
 def collatz_help (num, length):
-    if num = 1:
+    if num == 1:
         return length
 
     elif (num % 2 != 0):
         length += 1
         num = int( ( 3*num ) + 1 )
         length += 1
-        num = int(num / 2) 
+        num = int(num / 2)
+        # Odd numbers go through operations, hence the extra increment
         return collatz_helper (num, length)
 
     else:
