@@ -50,7 +50,8 @@ def collatz_help (num, length):
 
     elif (num % 2 != 0):
         length += 1
-        num = int( ( ( 3*num ) + 1 ) /2 )
+        num = int( ( 3*num ) + 1 )
+        num = num / 2 
         return collatz_helper (num)
 
     else:
