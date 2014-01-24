@@ -72,6 +72,7 @@ class TestCollatz (unittest.TestCase) :
     # -----
     # solve
     # -----
+    # comment
 
     def test_solve (self) :
         r = io.StringIO("1 10\n100 200\n201 210\n900 1000\n")
