@@ -63,12 +63,12 @@ def collatz_help (num, length):
         length += 1
         num = int(num / 2)
         # Odd numbers go through operations, hence the extra increment
-        return collatz_helper (num, length)
+        return collatz_help (num, length)
 
     else:
         length += 1
         num = int(num / 2)
-        return collatz_helper (num, length)
+        return collatz_help (num, length)
 
 
 # -------------
