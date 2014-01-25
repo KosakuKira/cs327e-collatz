@@ -62,8 +62,8 @@ class TestCollatz (unittest.TestCase) :
     
     # Same number, same min/max range
     def test_eval_5 (self) :
-        v = collatz_eval(4, 4)
-        self.assert_(v == 1)
+        v = collatz_eval(1, 1)
+        self.assertTrue(v == 1)
     
     # Backwards
     #def test_eval_6 (self) :

@@ -38,7 +38,7 @@ def collatz_eval (i, j) :
     assert(i > 0)
     assert(j > 0)
     max_cycle_length = 0
-    assert i < j
+    assert i <= j
     
     for a in range(i, j + 1):
         cycleCheck = collatz_help(a, 1)
@@ -100,3 +100,4 @@ def collatz_solve (r, w) :
         i, j = a
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
