@@ -59,6 +59,11 @@ class TestCollatz (unittest.TestCase) :
     def test_eval_4 (self) :
         v = collatz_eval(900, 1000)
         self.assertTrue(v == 174)
+    
+    # Same number, same min/max range
+    def test_eval_5 (self) :
+        v = collatz_eval(4, 4)
+        self.assert_(v == 1)
 
     # -----
     # print
@@ -85,5 +90,6 @@ class TestCollatz (unittest.TestCase) :
 # ----
 
 print("TestCollatz.py")
+print("Done.")
 unittest.main()
 print("Done.")
