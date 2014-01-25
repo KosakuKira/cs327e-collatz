@@ -64,6 +64,14 @@ def range_gen (num1, num2):
         while (firstNum <= num2):
             numRange.append(int(firstNum))
             firstNum += 1
+    
+    else:
+        while (firstNum >= num2):
+            numRange.append(int(firstNum))
+            firstNum -= 1
+    
+    return numRange
+
 
 # Below is a helper method for collatz_eval
 
@@ -116,3 +124,10 @@ def collatz_solve (r, w) :
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
 
+# Testing individual methods
+def main():
+    arr1 = range_gen(5, 10)
+    print (arr1)
+
+# Tester!    
+main()
