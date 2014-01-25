@@ -128,6 +128,12 @@ def collatz_solve (r, w) :
 def main():
     arr1 = range_gen(5, 10)
     print (arr1)
+    arr2 = range_gen(10, 1)
+    print (arr2)
+    arr3 = range_gen(1, 1)
+    print (arr3)
+    arr4 = range_gen(4, 4)
+    print (arr4)
 
 # Tester!    
 main()
