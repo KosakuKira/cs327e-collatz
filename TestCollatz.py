@@ -68,7 +68,55 @@ class TestCollatz (unittest.TestCase) :
         w = io.StringIO()
         collatz_print(w, 1, 10, 20)
         self.assertTrue(w.getvalue() == "1 10 20\n")
+    
+    def test_print_2 (self) :
+        w = io.StringIO()
+        collatz_print(w, 5, 10, 20)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "5 10 20\n")
 
+    def test_print_3 (self) :
+        w = io.StringIO()
+        collatz_print(w, 1000, 900, 174)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "1000 900 174\n")
+        
+    def test_print_4 (self) :
+        w = io.StringIO()
+        collatz_print(w, 5000, 6000, 236)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "5000 6000 236\n")
+
+    def test_print_5 (self) :  # corner test
+        w = io.StringIO()
+        collatz_print(w, 1, 1, 1)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "1 1 1\n")
+    
+    def test_print_55 (self): # corner test
+        w = io.StringIO()
+        collatz_print(w, 4, 4, 3)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "4 4 3\n")
+    
+
+    def test_print_6 (self) :  # corner test
+        w = io.StringIO()
+        collatz_print(w, 1, 1000000, 525)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "1 1000000 525\n")
+    
+    def test_print_7 (self) :  # corner test
+        w = io.StringIO()
+        collatz_print(w, 420, 666, 145)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "420 666 145\n")
+        
+    def test_print_8 (self) :  # corner test
+        w = io.StringIO()
+        collatz_print(w, 69, 420, 144)
+        print(w.getvalue())
+        self.assertTrue(w.getvalue() == "69 420 144\n")
     # -----
     # solve
     # -----
@@ -79,6 +127,21 @@ class TestCollatz (unittest.TestCase) :
         w = io.StringIO()
         collatz_solve(r, w)
         self.assertTrue(w.getvalue() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
+        
+    # Single line
+    def test_solve_1 (self) :
+        r = StringIO.StringIO("1 10\n")
+        w = StringIO.StringIO()
+        collatz_solve(r, w)
+        self.assert_(w.getvalue() == "1 10 20\n")
+
+    # Reverse solve
+    def test_solve_1 (self) :
+        r = StringIO.StringIO("10 1\n200 100\n201 210\n")
+        w = StringIO.StringIO()
+        collatz_solve(r, w)
+        self.assert_(w.getvalue() == "10 1 20\n200 100 125\n201 210 89\n")
+
 
 # ----
 # main

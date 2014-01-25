@@ -126,6 +126,7 @@ def collatz_solve (r, w) :
 
 # Testing individual methods
 def main():
+    var1 = ""
     # range_gen tests
     #arr1 = range_gen(5, 10)
     #print (arr1)
@@ -137,14 +138,22 @@ def main():
     #print (arr4)
     
     # Collatz_eval tests
-    #cycle1 = collatz_eval(100, 200)
-    #print (cycle1)
-    #cycle2 = collatz_eval(1, 1)
-    #print (cycle2)
-    #cycle3 = collatz_eval(900, 1000)
-    #print (cycle3)
+#    cycle1 = collatz_eval(666, 777)
+#    print (cycle1)
+#    cycle2 = collatz_eval(420, 666)
+#    print (cycle2)
+#    cycle3 = collatz_eval(69, 420)
+#    print (cycle3)
     #cycle4 = collatz_eval(1000, 900)
     #print (cycle4)
+    cycle5 = collatz_eval (5, 10)
+    print(cycle5)
+    cycle6 = collatz_eval (1000, 900)
+    print(cycle6)
+    cycle7 = collatz_eval (10, 5)
+    print(cycle7)
+    cycle8 = (collatz_eval(4, 4))
+    print(cycle8)
 
 # Tester!    
-#main()
+main()
