@@ -40,8 +40,8 @@ def collatz_eval (i, j) :
     max_cycle_length = 0
     # assert i <= j
     
-    
-    for a in range(i, j + 1):
+    endpt = max(i, j)
+    for a in range(endpt):
         cycleCheck = collatz_help(a, 1)
         if cycleCheck > max_cycle_length:
             max_cycle_length = cycleCheck
