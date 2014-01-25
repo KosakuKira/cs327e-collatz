@@ -64,6 +64,12 @@ class TestCollatz (unittest.TestCase) :
     def test_eval_5 (self) :
         v = collatz_eval(4, 4)
         self.assert_(v == 1)
+    
+    # Backwards
+    def test_eval_6 (self) :
+        v = collatz_eval(10, 1)
+        self.assert_(v == 1)
+        
 
     # -----
     # print
