@@ -41,12 +41,10 @@ def collatz_eval (i, j) :
     # assert i <= j
     
     # Set the range of numbers
-    numRange = []
+    numRange = range_gen(i, j)
     
-    
-    
-    endpt = max(i, j)
-    for a in range(1, endpt):
+    # endpt = max(i, j)
+    for a in numRange:
         cycleCheck = collatz_help(a, 1)
         if cycleCheck > max_cycle_length:
             max_cycle_length = cycleCheck
@@ -56,6 +54,8 @@ def collatz_eval (i, j) :
     v = max_cycle_length
     assert(v > 0)
     return v
+
+# Array-defining Helper
 
 def range_gen (num1, num2):
     numRange = []
@@ -126,14 +126,25 @@ def collatz_solve (r, w) :
 
 # Testing individual methods
 def main():
-    arr1 = range_gen(5, 10)
-    print (arr1)
-    arr2 = range_gen(10, 1)
-    print (arr2)
-    arr3 = range_gen(1, 1)
-    print (arr3)
-    arr4 = range_gen(4, 4)
-    print (arr4)
+    # range_gen tests
+    #arr1 = range_gen(5, 10)
+    #print (arr1)
+    #arr2 = range_gen(10, 1)
+    #print (arr2)
+    #arr3 = range_gen(1, 1)
+    #print (arr3)
+    #arr4 = range_gen(4, 4)
+    #print (arr4)
+    
+    # Collatz_eval tests
+    #cycle1 = collatz_eval(100, 200)
+    #print (cycle1)
+    #cycle2 = collatz_eval(1, 1)
+    #print (cycle2)
+    #cycle3 = collatz_eval(900, 1000)
+    #print (cycle3)
+    #cycle4 = collatz_eval(1000, 900)
+    #print (cycle4)
 
 # Tester!    
-main()
+#main()
