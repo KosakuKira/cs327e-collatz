@@ -100,19 +100,19 @@ class TestCollatz (unittest.TestCase) :
         self.assertTrue(w.getvalue() == "4 4 3\n")
     
 
-    def test_print_6 (self) :  # corner test
+    def test_print_6 (self) :  # whole range
         w = io.StringIO()
         collatz_print(w, 1, 1000000, 525)
         print(w.getvalue())
         self.assertTrue(w.getvalue() == "1 1000000 525\n")
     
-    def test_print_7 (self) :  # corner test
+    def test_print_7 (self) :  # other numbers
         w = io.StringIO()
         collatz_print(w, 420, 666, 145)
         print(w.getvalue())
         self.assertTrue(w.getvalue() == "420 666 145\n")
         
-    def test_print_8 (self) :  # corner test
+    def test_print_8 (self) :  # other numbers
         w = io.StringIO()
         collatz_print(w, 69, 420, 144)
         print(w.getvalue())
@@ -130,15 +130,15 @@ class TestCollatz (unittest.TestCase) :
         
     # Single line
     def test_solve_1 (self) :
-        r = StringIO.StringIO("1 10\n")
-        w = StringIO.StringIO()
+        r = io.StringIO("1 10\n")
+        w = io.StringIO()
         collatz_solve(r, w)
         self.assert_(w.getvalue() == "1 10 20\n")
 
     # Reverse solve
-    def test_solve_1 (self) :
-        r = StringIO.StringIO("10 1\n200 100\n201 210\n")
-        w = StringIO.StringIO()
+    def test_solve_2 (self) :
+        r = io.StringIO("10 1\n200 100\n201 210\n")
+        w = io.StringIO()
         collatz_solve(r, w)
         self.assert_(w.getvalue() == "10 1 20\n200 100 125\n201 210 89\n")
 
