@@ -28,4 +28,22 @@ from Collatz import collatz_solve
 # main
 # ----
 
-collatz_solve(sys.stdin, sys.stdout)
+#def main():
+ #   fileNails = open('RunCollatz.txt', 'r')
+  #  fileJony = open('RunCollatz.out', 'w')
+    
+   # for nails in fileNails:
+        # nails = str(nails, encoding = 'utf8')
+    #    nails = nails.rstrip("\n")
+     #   print (nails)
+    
+    
+    #jony = fileJony.read()
+    
+    
+    #fileNails.close()
+    #fileJony.close()
+
+collatz_solve('RunCollatz.txt', 'RunCollatz.out')
+
+#main()
