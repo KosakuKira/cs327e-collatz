@@ -133,14 +133,14 @@ class TestCollatz (unittest.TestCase) :
         r = io.StringIO("1 10\n")
         w = io.StringIO()
         collatz_solve(r, w)
-        self.assert_(w.getvalue() == "1 10 20\n")
+        self.assertTrue(w.getvalue() == "1 10 20\n")
 
     # Reverse solve
     def test_solve_2 (self) :
         r = io.StringIO("10 1\n200 100\n201 210\n")
         w = io.StringIO()
         collatz_solve(r, w)
-        self.assert_(w.getvalue() == "10 1 20\n200 100 125\n201 210 89\n")
+        self.assertTrue(w.getvalue() == "10 1 20\n200 100 125\n201 210 89\n")
 
 
 # ----
