@@ -41,10 +41,10 @@ def collatz_eval (i, j) :
     # assert i <= j
     
     # Set the range of numbers
-    numRange = range_gen(i, j)
+    numRange = abs(i - j)
     
     # endpt = max(i, j)
-    for a in numRange:
+    for a in range(0, numRange):
         cycleCheck = collatz_help(a, 1)
         if cycleCheck > max_cycle_length:
             max_cycle_length = cycleCheck
@@ -64,19 +64,24 @@ def range_gen (num1, num2):
         while (firstNum <= num2):
             numRange.append(int(firstNum))
             firstNum += 1
+            
+        return numRange
     
     else:
         while (firstNum >= num2):
             numRange.append(int(firstNum))
             firstNum -= 1
+        
+        return numRange
     
-    return numRange
 
 
 # Below is a helper method for collatz_eval
 
 
 def collatz_help (num, length):
+    assert (num > 0)
+    assert (length > 0)
     if num == 1:
         return length
 
@@ -125,7 +130,9 @@ def collatz_solve (r, w) :
         collatz_print(w, i, j, v)
 
 # Testing individual methods
-# def main():
+def main():
+    vario = collatz_eval(1,2)
+    print (vario)
   #  var1 = ""
     # range_gen tests
     #arr1 = range_gen(5, 10)
@@ -156,4 +163,4 @@ def collatz_solve (r, w) :
     #print(cycle8)
 
 # Tester!    
-#main()
+main()
