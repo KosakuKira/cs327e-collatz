@@ -41,14 +41,20 @@ def collatz_eval (i, j) :
     # assert i <= j
     
     # Set the range of numbers
-    numRange = abs(i - j)
     
+    mclArray = []
     # endpt = max(i, j)
-    for a in range(0, numRange):
-        cycleCheck = collatz_help(a, 1)
-        if cycleCheck > max_cycle_length:
-            max_cycle_length = cycleCheck
+    if i != j:
+        for a in range(i, j + 1):
+            mclArray.append(int(collatz_help(a, 1)))
+            
+            #if cycleCheck > max_cycle_length:
+             #   max_cycle_length = cycleCheck
         
+        max_cycle_length = max(mclArray)
+    else:
+        cycleCheck = collatz_help(i, 1)
+        max_cycle_length = cycleCheck    
         
     # <your code>
     v = max_cycle_length
@@ -86,10 +92,10 @@ def collatz_help (num, length):
         return length
 
     elif (num % 2 != 0):
-        length += 1
-        num = int( ( 3*num ) + 1 )
-        length += 1
-        num = int(num / 2)
+        length += 2
+        num = int( (( 3*num ) + 1)/2 )
+        
+        
         # Odd numbers go through operations, hence the extra increment
         return collatz_help (num, length)
 
@@ -131,8 +137,16 @@ def collatz_solve (r, w) :
 
 # Testing individual methods
 def main():
-    vario = collatz_eval(1,2)
+    vario = collatz_eval(1,10)
     print (vario)
+    vario1 = collatz_eval(100,200)
+    print (vario1)
+    vario2 = collatz_eval(201,210)
+    print (vario2)
+    vario3 = collatz_eval(900,1000)
+    print (vario3)
+    vario4 = collatz_eval(1,999999)
+    print (vario4)
   #  var1 = ""
     # range_gen tests
     #arr1 = range_gen(5, 10)
