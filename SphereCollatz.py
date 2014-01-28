@@ -6,6 +6,8 @@
 # Glenn P. Downing
 # ---------------------------
 
+import sys
+
 # ------------
 # collatz_read
 # ------------
@@ -77,25 +79,6 @@ def collatz_eval (i, j) :
     assert(v > 0)
     return v
 
-# Array-defining Helper
-
-def range_gen (num1, num2):
-    numRange = []
-    firstNum = num1
-    if (num1 < num2):
-        while (firstNum <= num2):
-            numRange.append(int(firstNum))
-            firstNum += 1
-            
-        return numRange
-    
-    else:
-        while (firstNum >= num2):
-            numRange.append(int(firstNum))
-            firstNum -= 1
-        
-        return numRange
-    
 
 
 # Below is a helper method for collatz_eval
@@ -147,11 +130,7 @@ def collatz_solve (r, w) :
         collatz_print(w, i, j, v)
 
 # Testing individual methods
-def main():
-    vario = collatz_eval(1,90000)
-    print (vario)
-    vario1 = collatz_eval(10, 1)
-    print (vario1)
+# def main():
   #  var1 = ""
     # range_gen tests
     #arr1 = range_gen(5, 10)
@@ -181,5 +160,6 @@ def main():
     #cycle8 = (collatz_eval(4, 4))
     #print(cycle8)
 
+collatz_solve(sys.stdin, sys.stdout)
 # Tester!    
-main()
+#main()
