@@ -40,13 +40,6 @@ def collatz_eval (i, j) :
     assert(i > 0)
     assert(j > 0)
     max_cycle_length = 0
-    # assert i <= j
-    
-    # Set the range of numbers
-    
-    mclArray = []
-    # endpt = max(i, j)
-    
     newI = i
     newJ = j
     
@@ -65,10 +58,6 @@ def collatz_eval (i, j) :
             val = collatz_help(a, 1)
             if (val > max_cycle_length):
                 max_cycle_length = val
-            
-            #if cycleCheck > max_cycle_length:
-             #   max_cycle_length = cycleCheck
-        
         
     else:
         cycleCheck = collatz_help(newI, 1)
@@ -129,37 +118,4 @@ def collatz_solve (r, w) :
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
 
-# Testing individual methods
-# def main():
-  #  var1 = ""
-    # range_gen tests
-    #arr1 = range_gen(5, 10)
-    #print (arr1)
-    #arr2 = range_gen(10, 1)
-    #print (arr2)
-    #arr3 = range_gen(1, 1)
-    #print (arr3)
-    #arr4 = range_gen(4, 4)
-    #print (arr4)
-    
-    # Collatz_eval tests
-#    cycle1 = collatz_eval(666, 777)
-#    print (cycle1)
-#    cycle2 = collatz_eval(420, 666)
-#    print (cycle2)
-#    cycle3 = collatz_eval(69, 420)
-#    print (cycle3)
-    #cycle4 = collatz_eval(1000, 900)
-    #print (cycle4)
-   # cycle5 = collatz_eval (5, 10)
-    #print(cycle5)
-    #cycle6 = collatz_eval (1000, 900)
-    #print(cycle6)
-    #cycle7 = collatz_eval (10, 5)
-    #print(cycle7)
-    #cycle8 = (collatz_eval(4, 4))
-    #print(cycle8)
-
 collatz_solve(sys.stdin, sys.stdout)
-# Tester!    
-#main()
